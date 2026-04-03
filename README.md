@@ -1,20 +1,21 @@
 # 🐍 Python do Zero com Copiloto IA
 
-## Semana 2 — Listas, Dicionários e Condicionais: Organizando Dados e Tomando Decisões!
+## Semana 2 — Listas, Dicionários, Condicionais e Loops: Organizando Dados, Tomando Decisões e Repetindo Ações!
 
 ---
 
 ## O que foi feito?
 
-Neste projeto da Semana 2, exploramos conceitos fundamentais de Python para organizar dados e tomar decisões. Especificamente:
+Neste projeto da Semana 2, exploramos conceitos fundamentais de Python para organizar dados, tomar decisões e repetir ações. Especificamente:
 
 - **Criamos uma lista** chamada `materiais` com itens escolares iniciais e adicionamos mais com `.append()`.
 - **Contamos os itens** da lista com `len()` e exibimos mensagens.
 - **Criamos um dicionário** chamado `informacoes_pessoais` com dados pessoais e acessamos valores usando chaves.
 - **Criamos uma segunda lista** chamada `ferramentas_cyber` com 5 ferramentas de cibersegurança e contamos os itens.
 - **Usamos estruturas condicionais** (if-else-elif) para verificar condições, como idade para maioridade, notas para classificações e respostas de um questionário.
+- **Implementamos loops** (`for` e `while`) para repetir ações, como iterar sobre listas, contar números e gerar tabuadas.
 
-O código é comentado e usa `print()` para mostrar os resultados na tela, permitindo que você veja como listas, dicionários e condicionais funcionam na prática. Este é um exemplo didático para iniciantes aprenderem a organizar dados e fazer o código "pensar" com decisões!
+O código é comentado e usa `print()` para mostrar os resultados na tela, permitindo que você veja como listas, dicionários, condicionais e loops funcionam na prática. Este é um exemplo didático para iniciantes aprenderem a organizar dados, fazer o código "pensar" com decisões e automatizar repetições!
 
 ### Objetivos de Aprendizado
 
@@ -29,8 +30,9 @@ Com este código, você aprenderá:
 - Como usar `print()` para depurar e visualizar resultados.
 - Como criar múltiplas listas em um mesmo programa para organizar diferentes tipos de dados.
 - Como usar **estruturas condicionais** (`if`, `else`, `elif`) para tomar decisões no código com base em condições.
-- Como verificar igualdade (`==`) e comparações (`>=`, `<`) em condicionais.
-
+- Como verificar igualdade (`==`) e comparações (`>=`, `<`) em condicionais.- Como usar **loops** (`for` e `while`) para repetir ações automaticamente.
+- Como iterar sobre listas com `for item in lista:`.
+- Como usar `while` com condições para loops controlados.
 ---
 
 ## Conceitos Aprendidos
@@ -336,6 +338,125 @@ Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
 
 ---
 
+## Arquivo Terciário: `loops.py`
+
+Este arquivo demonstra o uso de **loops** (`for` e `while`) para repetir ações automaticamente. Loops são como "robôs" que fazem tarefas repetitivas sem você precisar escrever o mesmo código várias vezes.
+
+```python
+# FOR = para cada COR DE BLUSA FAÇA O SEGUINTE
+cores_de_blusa = ["vermelha", "azul", "verde", "amarela", "preta"]
+for cor in cores_de_blusa:
+    print("Eu tenho uma blusa " + cor + ".")
+
+# WHILE = ENQUANTO A CONDIÇÃO FOR VERDADEIRA, FAÇA O SEGUINTE
+contador = 0
+while contador < 10:
+    print("Contador: " + str(contador))
+    contador += 1
+
+# Exemplo de uso do while para contar de 1 a 10 e imprimir os números pares
+contador = 1
+while contador <= 10:
+    if contador % 2 == 0:
+        print("Número par: " + str(contador))
+    contador += 1
+
+# while para contar de 1 a 10 e imprimir os números ímpares
+contador = 1
+while contador <= 10:
+    if contador % 2 != 0:
+        print("Número ímpar: " + str(contador))
+    contador += 1
+
+# while para tabuada do 10
+contador = 1
+while contador <= 10:
+    resultado = 10 * contador
+    print("10 x " + str(contador) + " = " + str(resultado))
+    contador += 1
+
+# while para uma lista de nomes
+nomes = ["Alice", "Bob", "Charlie", "Diana", "Eve"]
+contador = 0
+while contador < len(nomes):
+    print("Nome: " + nomes[contador])
+    contador += 1
+```
+
+### Explicação Linha por Linha (Para Iniciantes)
+
+Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
+
+1. **Comentário e Lista:**
+   ```python
+   # FOR = para cada COR DE BLUSA FAÇA O SEGUINTE
+   cores_de_blusa = ["vermelha", "azul", "verde", "amarela", "preta"]
+   ```
+   - Cria uma lista de cores.
+   - Comentário explica que o `for` vai processar cada cor.
+
+2. **Loop For:**
+   ```python
+   for cor in cores_de_blusa:
+       print("Eu tenho uma blusa " + cor + ".")
+   ```
+   - `for cor in cores_de_blusa:`: Para cada item na lista, chama de "cor".
+   - Imprime uma mensagem para cada cor.
+
+3. **Comentário While:**
+   ```python
+   # WHILE = ENQUANTO A CONDIÇÃO FOR VERDADEIRA, FAÇA O SEGUINTE
+   contador = 0
+   ```
+   - Inicia contador em 0.
+
+4. **Loop While Simples:**
+   ```python
+   while contador < 10:
+       print("Contador: " + str(contador))
+       contador += 1
+   ```
+   - `while contador < 10:`: Enquanto contador for menor que 10, execute.
+   - Imprime o contador e aumenta em 1.
+
+5. **While com Pares:**
+   ```python
+   contador = 1
+   while contador <= 10:
+       if contador % 2 == 0:
+           print("Número par: " + str(contador))
+       contador += 1
+   ```
+   - Conta de 1 a 10.
+   - `if contador % 2 == 0:`: Se resto da divisão por 2 for 0, é par.
+   - Imprime apenas pares.
+
+6. **While com Ímpares:**
+   - Similar, mas `if contador % 2 != 0:` para ímpares.
+
+7. **Tabuada:**
+   ```python
+   contador = 1
+   while contador <= 10:
+       resultado = 10 * contador
+       print("10 x " + str(contador) + " = " + str(resultado))
+       contador += 1
+   ```
+   - Calcula e imprime tabuada do 10.
+
+8. **While com Lista:**
+   ```python
+   nomes = ["Alice", "Bob", "Charlie", "Diana", "Eve"]
+   contador = 0
+   while contador < len(nomes):
+       print("Nome: " + nomes[contador])
+       contador += 1
+   ```
+   - Usa contador para acessar índices da lista.
+   - `len(nomes)`: Tamanho da lista (5).
+
+---
+
 ## Códigos Utilizados e o que Fazem
 
 | Código | O que faz |
@@ -352,6 +473,10 @@ Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
 | `elif condição:` | Verifica outra condição se a anterior falhou |
 | `==` | Verifica se dois valores são iguais |
 | `>=`, `<=`, `>`, `<` | Operadores de comparação (maior ou igual, etc.) |
+| `for item in lista:` | Loop que repete para cada item na lista |
+| `while condição:` | Loop que repete enquanto a condição for verdadeira |
+| `contador += 1` | Incrementa o contador em 1 (equivalente a `contador = contador + 1`) |
+| `%` | Operador de módulo (resto da divisão, ex: `5 % 2 == 1`) |
 
 ---
 
@@ -374,6 +499,15 @@ Quando você roda `condicionais.py`, o programa:
 1. Verifica se a pessoa é maior ou menor de idade com base na idade.
 2. Classifica uma nota em excelente, muito boa ou boa.
 3. Faz um questionário com 4 perguntas, verificando respostas e dando feedback.
+
+Quando você roda `loops.py`, o programa:
+
+1. Usa `for` para imprimir mensagens sobre cores de blusas.
+2. Usa `while` para contar de 0 a 9.
+3. Conta de 1 a 10 e imprime números pares.
+4. Conta de 1 a 10 e imprime números ímpares.
+5. Gera a tabuada do 10.
+6. Itera sobre uma lista de nomes usando `while` e índices.
 
 **Saída esperada para `listas_dicts.py`:**
 ```
@@ -398,6 +532,50 @@ Resposta correta!
 Resposta correta!
 ```
 
+**Saída esperada para `loops.py` (resumida):**
+```
+Eu tenho uma blusa vermelha.
+Eu tenho uma blusa azul.
+Eu tenho uma blusa verde.
+Eu tenho uma blusa amarela.
+Eu tenho uma blusa preta.
+Contador: 0
+Contador: 1
+Contador: 2
+Contador: 3
+Contador: 4
+Contador: 5
+Contador: 6
+Contador: 7
+Contador: 8
+Contador: 9
+Número par: 2
+Número par: 4
+Número par: 6
+Número par: 8
+Número par: 10
+Número ímpar: 1
+Número ímpar: 3
+Número ímpar: 5
+Número ímpar: 7
+Número ímpar: 9
+10 x 1 = 10
+10 x 2 = 20
+10 x 3 = 30
+10 x 4 = 40
+10 x 5 = 50
+10 x 6 = 60
+10 x 7 = 70
+10 x 8 = 80
+10 x 9 = 90
+10 x 10 = 100
+Nome: Alice
+Nome: Bob
+Nome: Charlie
+Nome: Diana
+Nome: Eve
+```
+
 ---
 
 ## Arquivos na Pasta (Em Ordem de Aprendizado)
@@ -408,6 +586,7 @@ Aqui estão todos os arquivos na pasta "semana 2", organizados do inicial ao úl
 - **`variaveis.py`**: Exemplos de variáveis, tipos de dados, concatenação e operações simples.
 - **`listas_dicts.py`**: O arquivo principal desta semana, demonstrando listas e dicionários com exemplos práticos.
 - **`condicionais.py`**: Exemplos de estruturas condicionais (if-else) para tomada de decisões no código.
+- **`loops.py`**: Exemplos de loops (for e while) para repetir ações automaticamente.
 - **`README.md`**: Este arquivo de documentação, explicando tudo de forma didática.
 
 Esses arquivos mostram a evolução do aprendizado, começando com conceitos básicos e avançando para estruturas de dados!
@@ -420,6 +599,7 @@ Para acompanhar o aprendizado passo a passo, execute os arquivos nesta ordem:
 2. **`variaveis.py`** - Exemplos de variáveis e tipos de dados.
 3. **`listas_dicts.py`** - Demonstração de listas e dicionários.
 4. **`condicionais.py`** - Exemplos de condicionais para decisões.
+5. **`loops.py`** - Exemplos de loops para repetições.
 
 O `README.md` é para leitura e não precisa ser executado!
 
