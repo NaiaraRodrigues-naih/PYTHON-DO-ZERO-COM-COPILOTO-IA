@@ -295,6 +295,16 @@ Aqui estão todos os arquivos na pasta "semana 2", organizados do inicial ao úl
 
 Esses arquivos mostram a evolução do aprendizado, começando com conceitos básicos e avançando para estruturas de dados!
 
+### Ordem Recomendada para Executar os Arquivos
+
+Para acompanhar o aprendizado passo a passo, execute os arquivos nesta ordem:
+
+1. **`ola.py`** - Primeiro script, para ver saudações básicas.
+2. **`variaveis.py`** - Exemplos de variáveis e tipos de dados.
+3. **`listas_dicts.py`** - Demonstração de listas e dicionários.
+
+O `README.md` é para leitura e não precisa ser executado!
+
 ---
 
 ## Dicas para Iniciantes
