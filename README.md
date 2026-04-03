@@ -56,5 +56,5 @@ Este projeto é para fins educacionais. Sinta-se à vontade para usar e comparti
 ---
 
 **Feito com ❤️ por Naiara Rodrigues**  
-*Estudante da KENSEICYBERSECURITY ACADEMY - Futura desenvolvedora na KenseiCyberSecurity*</content>
+*Estudante de Engenharia de Software- Projeto pela KenseiCyberSecurity*</content>
 <parameter name="filePath">c:\Users\User\Desktop\kensei Cybersecurity\Python do zero com copiloto IA - semana 2\README.md
