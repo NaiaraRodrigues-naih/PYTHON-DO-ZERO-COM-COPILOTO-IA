@@ -291,6 +291,7 @@ Aqui estão todos os arquivos na pasta "semana 2", organizados do inicial ao úl
 - **`ola.py`**: O primeiro script criado, com saudações básicas e uso de `print()`.
 - **`variaveis.py`**: Exemplos de variáveis, tipos de dados, concatenação e operações simples.
 - **`listas_dicts.py`**: O arquivo principal desta semana, demonstrando listas e dicionários com exemplos práticos.
+- **`condicionais.py`**: Exemplos de estruturas condicionais (if-else) para tomada de decisões no código.
 - **`README.md`**: Este arquivo de documentação, explicando tudo de forma didática.
 
 Esses arquivos mostram a evolução do aprendizado, começando com conceitos básicos e avançando para estruturas de dados!
@@ -302,6 +303,7 @@ Para acompanhar o aprendizado passo a passo, execute os arquivos nesta ordem:
 1. **`ola.py`** - Primeiro script, para ver saudações básicas.
 2. **`variaveis.py`** - Exemplos de variáveis e tipos de dados.
 3. **`listas_dicts.py`** - Demonstração de listas e dicionários.
+4. **`condicionais.py`** - Exemplos de condicionais para decisões.
 
 O `README.md` é para leitura e não precisa ser executado!
 
