@@ -6,7 +6,27 @@
 
 ## O que foi feito?
 
-Nesta semana, avançamos no aprendizado de Python! Exploramos **listas** e **dicionários**, que são maneiras poderosas de armazenar e organizar dados. Aprendemos a criar listas de itens, adicionar elementos a elas e acessar informações em dicionários usando chaves. Tudo isso de forma prática e simples para iniciantes!
+Neste arquivo `listas_dicts.py`, criamos um programa simples em Python que demonstra o uso prático de **listas** e **dicionários**. Especificamente:
+
+- **Criamos uma lista** chamada `materiais` com itens escolares iniciais.
+- **Adicionamos um novo item** à lista usando o método `.append()`.
+- **Contamos os itens** da lista com `len()` e exibimos uma mensagem.
+- **Criamos um dicionário** chamado `informacoes_pessoais` com dados pessoais (nome, sobrenome, idade, cidade).
+- **Acessamos e exibimos** cada valor do dicionário individualmente, convertendo tipos quando necessário (como idade de número para texto).
+
+O código é comentado e usa `print()` para mostrar os resultados na tela, permitindo que você veja como listas e dicionários funcionam na prática. Este é um exemplo didático para iniciantes aprenderem a organizar e manipular dados em Python!
+
+### Objetivos de Aprendizado
+
+Com este código, você aprenderá:
+- Como declarar e inicializar uma **lista** com valores.
+- Como usar `.append()` para adicionar itens a uma lista.
+- Como usar `len()` para contar elementos em uma lista.
+- Como declarar e inicializar um **dicionário** com pares chave-valor.
+- Como acessar valores em um dicionário usando chaves.
+- Como concatenar strings e converter tipos (ex: `str()` para números).
+- A importância de comentários (`#`) para explicar o código.
+- Como usar `print()` para depurar e visualizar resultados.
 
 ---
 
