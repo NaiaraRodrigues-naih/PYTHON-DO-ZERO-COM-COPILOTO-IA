@@ -284,12 +284,16 @@ Quantidade de ferramentas de cyber: 5
 
 ---
 
-## Outros Arquivos na Pasta
+## Arquivos na Pasta (Em Ordem de Aprendizado)
 
-- **`ola.py`**: Seu primeiro script, com saudações e prints básicos.
-- **`variaveis.py`**: Exemplos de variáveis, concatenação e tipos de dados.
+Aqui estão todos os arquivos na pasta "semana 2", organizados do inicial ao último, mostrando o progresso no aprendizado de Python:
 
-Esses arquivos são de semanas anteriores, mas ajudam a ver o progresso!
+- **`ola.py`**: O primeiro script criado, com saudações básicas e uso de `print()`.
+- **`variaveis.py`**: Exemplos de variáveis, tipos de dados, concatenação e operações simples.
+- **`listas_dicts.py`**: O arquivo principal desta semana, demonstrando listas e dicionários com exemplos práticos.
+- **`README.md`**: Este arquivo de documentação, explicando tudo de forma didática.
+
+Esses arquivos mostram a evolução do aprendizado, começando com conceitos básicos e avançando para estruturas de dados!
 
 ---
 
