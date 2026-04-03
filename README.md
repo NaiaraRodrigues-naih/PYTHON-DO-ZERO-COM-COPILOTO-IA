@@ -4,7 +4,7 @@ Bem-vindo ao repositório **Python do Zero com Copiloto IA**! Este projeto é um
 
 ## 📚 Sobre o Projeto
 
-Este repositório contém materiais e códigos desenvolvidos durante o curso "Python do Zero com Copiloto IA". Cada semana aborda conceitos específicos da linguagem Python, com exemplos práticos, explicações didáticas e exercícios para iniciantes.
+Este repositório contém materiais e códigos desenvolvidos durante o curso "Python do Zero com Copiloto IA" pela **KENSEICYBERSECURITY ACADEMY**. Cada semana aborda conceitos específicos da linguagem Python, com exemplos práticos, explicações didáticas e exercícios para iniciantes.
 
 O objetivo é tornar o aprendizado de programação acessível, divertido e progressivo, utilizando ferramentas de IA para acelerar o processo.
 
@@ -56,5 +56,5 @@ Este projeto é para fins educacionais. Sinta-se à vontade para usar e comparti
 ---
 
 **Feito com ❤️ por Naiara Rodrigues**  
-*Futura desenvolvedora na KenseiCyberSecurity*</content>
+*Estudante da KENSEICYBERSECURITY ACADEMY - Futura desenvolvedora na KenseiCyberSecurity*</content>
 <parameter name="filePath">c:\Users\User\Desktop\kensei Cybersecurity\Python do zero com copiloto IA - semana 2\README.md
