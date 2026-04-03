@@ -69,6 +69,88 @@ print("Idade: " + str(informacoes_pessoais["idade"]))  # Converte número para s
 print("Cidade: " + informacoes_pessoais["cidade"])
 ```
 
+### Explicação Linha por Linha (Para Iniciantes)
+
+Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
+
+1. **Comentário Inicial:**
+   ```python
+   # Lista de materiais escolares
+   ```
+   - Isso é um **comentário**. Começa com `#` e o Python ignora. Serve para explicar o que o código faz. Aqui, indica que vamos criar uma lista de materiais escolares.
+
+2. **Criando a Lista:**
+   ```python
+   materiais = ["Caderno", "Lápis de cor", "Borracha", "Caneta", "Régua", 'Mochila', "Giz de cera"]
+   ```
+   - Criamos uma **lista** chamada `materiais`.
+   - Colocamos itens entre `[]`, separados por vírgulas.
+   - Cada item é uma **string** (texto), entre aspas.
+   - Agora, `materiais` guarda esses 7 itens em ordem.
+
+3. **Adicionando um Item:**
+   ```python
+   materiais.append("Tesoura")
+   ```
+   - Usamos `.append()` para adicionar "Tesoura" no final da lista.
+   - Agora a lista tem 8 itens!
+
+4. **Exibindo a Lista:**
+   ```python
+   print(materiais)
+   ```
+   - `print()` mostra o conteúdo da lista na tela.
+   - Você verá: `['Caderno', 'Lápis de cor', 'Borracha', 'Caneta', 'Régua', 'Mochila', 'Giz de cera', 'Tesoura']`
+
+5. **Contando os Itens:**
+   ```python
+   quantidade_materiais = len(materiais)
+   ```
+   - `len()` conta quantos itens há na lista.
+   - Guardamos o resultado (8) na variável `quantidade_materiais`.
+
+6. **Mensagem sobre Quantidade:**
+   ```python
+   print("Quantidade de materiais escolares: 2 de cada ")
+   ```
+   - Exibe uma mensagem fixa. (Nota: diz "2 de cada", mas na verdade conta os itens da lista.)
+
+7. **Comentário para Dicionário:**
+   ```python
+   # Dicionário de informações pessoais
+   ```
+   - Outro comentário, indicando que agora vamos trabalhar com dicionário.
+
+8. **Criando o Dicionário:**
+   ```python
+   informacoes_pessoais = {
+       "nome": "Naiara",
+       "sobrenome": "Rodrigues",
+       "idade": 30,
+       "cidade": "Minas Gerais"
+   }
+   ```
+   - Criamos um **dicionário** chamado `informacoes_pessoais`.
+   - Entre `{}`, colocamos pares: "chave": valor.
+   - Chaves são strings (como "nome"), valores podem ser strings ou números.
+
+9. **Exibindo o Dicionário:**
+   ```python
+   print(informacoes_pessoais)
+   ```
+   - Mostra o dicionário inteiro: `{'nome': 'Naiara', 'sobrenome': 'Rodrigues', 'idade': 30, 'cidade': 'Minas Gerais'}`
+
+10. **Acessando Valores:**
+    ```python
+    print("Nome: " + informacoes_pessoais["nome"])
+    ```
+    - Usamos a chave "nome" para pegar o valor "Naiara".
+    - Concatenamos (juntamos) com "Nome: " usando `+`.
+
+11. **Mais Acessos:**
+    - Faz o mesmo para sobrenome e cidade.
+    - Para idade: `str(informacoes_pessoais["idade"])` converte o número 30 para string "30", porque `+` só funciona com textos iguais.
+
 ---
 
 ## Códigos Utilizados e o que Fazem
@@ -124,6 +206,7 @@ Esses arquivos são de semanas anteriores, mas ajudam a ver o progresso!
 - **Dicionários** são ideais para dados estruturados com rótulos.
 - Sempre use `print()` para ver o que seu código está fazendo.
 - Pratique adicionando mais itens às listas e chaves aos dicionários!
+- Se der erro, verifique as aspas, colchetes e chaves — eles precisam estar balanceados.
 
 Continue explorando e logo você estará criando programas incríveis! 🚀
 
@@ -133,21 +216,19 @@ Continue explorando e logo você estará criando programas incríveis! 🚀
 
 ---
 
-## Como rodar o script?
+## Como Rodar o Script `listas_dicts.py`?
 
-1. Tenha o **Python** instalado no seu computador
-2. Abra o terminal na pasta do arquivo
+1. Tenha o **Python** instalado no seu computador (versão 3.x recomendada).
+2. Abra o terminal ou prompt de comando na pasta onde está o arquivo `listas_dicts.py`.
 3. Digite o comando:
 
 ```bash
-python ola.py
+python listas_dicts.py
 ```
 
----
+4. Pressione Enter e veja a saída na tela!
 
----
-
-## Variáveis: Caixas com Etiquetas
+Se você tiver dúvidas, pratique rodando o código e modificando os valores para entender melhor.
 
 ### `variaveis.py`
 
