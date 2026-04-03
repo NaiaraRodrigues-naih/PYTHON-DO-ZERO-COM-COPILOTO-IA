@@ -1,22 +1,20 @@
 # 🐍 Python do Zero com Copiloto IA
 
-## Semana 2 — Listas e Dicionários: Organizando Dados!
+## Semana 2 — Listas, Dicionários e Condicionais: Organizando Dados e Tomando Decisões!
 
 ---
 
 ## O que foi feito?
 
-Neste arquivo `listas_dicts.py`, criamos um programa simples em Python que demonstra o uso prático de **listas** e **dicionários**. Especificamente:
+Neste projeto da Semana 2, exploramos conceitos fundamentais de Python para organizar dados e tomar decisões. Especificamente:
 
-- **Criamos uma lista** chamada `materiais` com itens escolares iniciais.
-- **Adicionamos um novo item** à lista usando o método `.append()`.
-- **Contamos os itens** da lista com `len()` e exibimos uma mensagem.
-- **Criamos um dicionário** chamado `informacoes_pessoais` com dados pessoais (nome, sobrenome, idade, cidade).
-- **Acessamos e exibimos** cada valor do dicionário individualmente, convertendo tipos quando necessário (como idade de número para texto).
-- **Criamos uma segunda lista** chamada `ferramentas_cyber` com 5 ferramentas de cibersegurança.
-- **Contamos e exibimos** a quantidade de ferramentas na lista.
+- **Criamos uma lista** chamada `materiais` com itens escolares iniciais e adicionamos mais com `.append()`.
+- **Contamos os itens** da lista com `len()` e exibimos mensagens.
+- **Criamos um dicionário** chamado `informacoes_pessoais` com dados pessoais e acessamos valores usando chaves.
+- **Criamos uma segunda lista** chamada `ferramentas_cyber` com 5 ferramentas de cibersegurança e contamos os itens.
+- **Usamos estruturas condicionais** (if-else-elif) para verificar condições, como idade para maioridade, notas para classificações e respostas de um questionário.
 
-O código é comentado e usa `print()` para mostrar os resultados na tela, permitindo que você veja como listas e dicionários funcionam na prática. Este é um exemplo didático para iniciantes aprenderem a organizar e manipular dados em Python!
+O código é comentado e usa `print()` para mostrar os resultados na tela, permitindo que você veja como listas, dicionários e condicionais funcionam na prática. Este é um exemplo didático para iniciantes aprenderem a organizar dados e fazer o código "pensar" com decisões!
 
 ### Objetivos de Aprendizado
 
@@ -30,6 +28,8 @@ Com este código, você aprenderá:
 - A importância de comentários (`#`) para explicar o código.
 - Como usar `print()` para depurar e visualizar resultados.
 - Como criar múltiplas listas em um mesmo programa para organizar diferentes tipos de dados.
+- Como usar **estruturas condicionais** (`if`, `else`, `elif`) para tomar decisões no código com base em condições.
+- Como verificar igualdade (`==`) e comparações (`>=`, `<`) em condicionais.
 
 ---
 
@@ -241,6 +241,101 @@ No código, criamos uma lista com 5 ferramentas populares de cibersegurança. Aq
 
 ---
 
+## Arquivo Secundário: `condicionais.py`
+
+Este arquivo demonstra o uso de **estruturas condicionais** (if-else-elif) para tomar decisões no código. É como ensinar o programa a escolher caminhos diferentes com base em condições.
+
+```python
+nome_do_candidato = "Naiara"
+idade = 30
+if idade >= 18:
+    print(nome_do_candidato + " é maior de idade.")
+else:
+    print(nome_do_candidato + " é menor de idade.")
+
+nota = 97
+if nota >= 90:
+    print("Parabéns! Você tirou uma nota excelente.")
+elif nota >= 80 and nota < 90:
+    print("Você tirou uma nota muito boa.")
+else:
+    print("Você tirou uma nota boa.")
+
+# Questionário
+pergunta1 = "Qual é a capital do Brasil?"
+resposta1 = "Brasília"
+if resposta1 == "Brasília":
+    print("Resposta correta!")
+else:
+    print("Resposta incorreta. A capital do Brasil é Brasília.")
+
+qual_a_cor_do_ceu = "azul"
+if qual_a_cor_do_ceu == "azul":
+    print("Resposta correta!")
+else:
+    print("Resposta incorreta. A cor do céu é azul.")
+
+quantos_dedos_tem_a_mao = 5
+if quantos_dedos_tem_a_mao == 5:
+    print("Resposta correta!")
+else:
+    print("Resposta incorreta. A mão tem 5 dedos.")
+
+qual_a_soma_de_2_mais_2 = 4
+if qual_a_soma_de_2_mais_2 == 4:
+    print("Resposta correta!")
+else:
+    print("Resposta incorreta. A soma de 2 + 2 é 4.")
+```
+
+### Explicação Linha por Linha (Para Iniciantes)
+
+Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
+
+1. **Verificação de Idade:**
+   ```python
+   nome_do_candidato = "Naiara"
+   idade = 30
+   if idade >= 18:
+       print(nome_do_candidato + " é maior de idade.")
+   else:
+       print(nome_do_candidato + " é menor de idade.")
+   ```
+   - Define nome e idade.
+   - `if idade >= 18`: Se idade for 18 ou mais, imprime "maior de idade".
+   - `else`: Caso contrário, "menor de idade".
+
+2. **Classificação de Nota:**
+   ```python
+   nota = 97
+   if nota >= 90:
+       print("Parabéns! Você tirou uma nota excelente.")
+   elif nota >= 80 and nota < 90:
+       print("Você tirou uma nota muito boa.")
+   else:
+       print("Você tirou uma nota boa.")
+   ```
+   - `if nota >= 90`: Excelente.
+   - `elif`: Senão, se entre 80 e 89, muito boa.
+   - `else`: Senão, boa.
+
+3. **Questionário - Capital:**
+   ```python
+   resposta1 = "Brasília"
+   if resposta1 == "Brasília":
+       print("Resposta correta!")
+   else:
+       print("Resposta incorreta. A capital do Brasil é Brasília.")
+   ```
+   - Verifica se resposta é "Brasília" (igualdade com `==`).
+   - Se sim, correta; senão, informa a certa.
+
+4-6. **Outras Perguntas:**
+   - Mesma lógica: verifica cor do céu, dedos na mão, soma de 2+2.
+   - Usa `==` para igualdade.
+
+---
+
 ## Códigos Utilizados e o que Fazem
 
 | Código | O que faz |
@@ -252,6 +347,11 @@ No código, criamos uma lista com 5 ferramentas populares de cibersegurança. Aq
 | `print()` | Exibe mensagens ou valores na tela |
 | `"chave"` | Acessa o valor associado à chave no dicionário |
 | `str(número)` | Converte um número para string (texto) |
+| `if condição:` | Executa o bloco se a condição for verdadeira |
+| `else:` | Executa o bloco se nenhuma condição anterior for verdadeira |
+| `elif condição:` | Verifica outra condição se a anterior falhou |
+| `==` | Verifica se dois valores são iguais |
+| `>=`, `<=`, `>`, `<` | Operadores de comparação (maior ou igual, etc.) |
 
 ---
 
@@ -269,7 +369,13 @@ Quando você roda `listas_dicts.py`, o programa:
 8. Exibe a lista de ferramentas.
 9. Conta e informa a quantidade de ferramentas.
 
-**Saída esperada:**
+Quando você roda `condicionais.py`, o programa:
+
+1. Verifica se a pessoa é maior ou menor de idade com base na idade.
+2. Classifica uma nota em excelente, muito boa ou boa.
+3. Faz um questionário com 4 perguntas, verificando respostas e dando feedback.
+
+**Saída esperada para `listas_dicts.py`:**
 ```
 ['Caderno', 'Lápis de cor', 'Borracha', 'Caneta', 'Régua', 'Mochila', 'Giz de cera', 'Tesoura']
 Quantidade de materiais escolares: 2 de cada
@@ -280,6 +386,16 @@ Idade: 30
 Cidade: Minas Gerais
 ['Nmap', 'Wireshark', 'Metasploit', 'Burp Suite', 'John the Ripper']
 Quantidade de ferramentas de cyber: 5
+```
+
+**Saída esperada para `condicionais.py`:**
+```
+Naiara é maior de idade.
+Parabéns! Você tirou uma nota excelente.
+Resposta correta!
+Resposta correta!
+Resposta correta!
+Resposta correta!
 ```
 
 ---
