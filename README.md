@@ -1,53 +1,135 @@
 # 🐍 Python do Zero com Copiloto IA
 
-## Semana 2 — Mão na Massa: Primeiro Script!
+## Semana 2 — Listas e Dicionários: Organizando Dados!
 
 ---
 
 ## O que foi feito?
 
-Nesta semana dei meus primeiros passos no Python!
-Escrevi meu **primeiro script** do zero, aprendi a exibir mensagens na tela e a deixar comentários no código.
+Nesta semana, avançamos no aprendizado de Python! Exploramos **listas** e **dicionários**, que são maneiras poderosas de armazenar e organizar dados. Aprendemos a criar listas de itens, adicionar elementos a elas e acessar informações em dicionários usando chaves. Tudo isso de forma prática e simples para iniciantes!
 
 ---
 
-## Arquivo criado
+## Conceitos Aprendidos
 
-### `ola.py`
+### O que são Listas?
+
+Uma **lista** é como uma caixa que pode guardar vários itens em ordem. É como uma lista de compras ou uma fila de pessoas. Em Python, listas são criadas com colchetes `[]` e os itens são separados por vírgulas.
+
+**Exemplo simples:**
+```python
+frutas = ["maçã", "banana", "laranja"]
+```
+
+Você pode adicionar itens à lista usando `.append()` e contar quantos itens há com `len()`.
+
+### O que são Dicionários?
+
+Um **dicionário** é como um livro de endereços: cada informação tem um "rótulo" (chave) associado a um valor. É perfeito para armazenar dados relacionados, como nome, idade, cidade, etc. Em Python, dicionários são criados com chaves `{}` e pares chave-valor separados por dois pontos `:`.
+
+**Exemplo simples:**
+```python
+pessoa = {
+    "nome": "João",
+    "idade": 25,
+    "cidade": "São Paulo"
+}
+```
+
+Para acessar um valor, use a chave: `pessoa["nome"]`.
+
+---
+
+## Arquivo Principal: `listas_dicts.py`
+
+Este arquivo demonstra o uso de listas e dicionários com um exemplo prático: materiais escolares e informações pessoais.
 
 ```python
-# Meu primeiro programa em Python
-print ('"Olá, Naih !"')
-print("Eu sou", "um futuro dev")
+# Lista de materiais escolares
+materiais = ["Caderno", "Lápis de cor", "Borracha", "Caneta", "Régua", 'Mochila', "Giz de cera"]
+materiais.append("Tesoura")  # Adiciona "Tesoura" à lista
+print(materiais)  # Exibe a lista completa
 
-# Perguntando o nome do usuário
-print("Qual é o seu nome? Naiara")
-print("Olá, Naiara! Seja bem-vinda ao mundo da KenseiCyberSecurity!")
+quantidade_materiais = len(materiais)  # Conta os itens
+print("Quantidade de materiais escolares: 2 de cada ")
+
+# Dicionário de informações pessoais
+informacoes_pessoais = {
+    "nome": "Naiara",
+    "sobrenome": "Rodrigues",
+    "idade": 30,
+    "cidade": "Minas Gerais"
+}
+print(informacoes_pessoais)  # Exibe o dicionário todo
+
+# Acessando valores específicos
+print("Nome: " + informacoes_pessoais["nome"])
+print("Sobrenome: " + informacoes_pessoais["sobrenome"])
+print("Idade: " + str(informacoes_pessoais["idade"]))  # Converte número para string
+print("Cidade: " + informacoes_pessoais["cidade"])
 ```
 
 ---
 
-## Códigos utilizados e o que fazem
+## Códigos Utilizados e o que Fazem
 
 | Código | O que faz |
 |--------|-----------|
-| `#` | **Comentário** — linha ignorada pelo Python, serve para anotar o código |
-| `print()` | **Exibe uma mensagem** na tela/terminal |
-| `"texto"` | **String** — representa um texto entre aspas |
-| `print("a", "b")` | Exibe vários textos juntos, separados por espaço automaticamente |
+| `[]` | Cria uma **lista** vazia ou com itens |
+| `{}` | Cria um **dicionário** vazio ou com pares chave-valor |
+| `.append(item)` | Adiciona um item ao final da lista |
+| `len(lista)` | Retorna o número de itens na lista |
+| `print()` | Exibe mensagens ou valores na tela |
+| `"chave"` | Acessa o valor associado à chave no dicionário |
+| `str(número)` | Converte um número para string (texto) |
 
 ---
 
-## O que o script faz?
+## O que o Script Faz?
 
-Quando rodado, o programa exibe mensagens de boas-vindas no terminal:
+Quando você roda `listas_dicts.py`, o programa:
 
+1. Cria uma lista de materiais escolares e adiciona "Tesoura" a ela.
+2. Exibe a lista completa.
+3. Conta e informa a quantidade de materiais (dizendo que são 2 de cada, mas na verdade conta os itens da lista).
+4. Cria um dicionário com informações pessoais.
+5. Exibe o dicionário inteiro.
+6. Mostra cada informação separadamente, como nome, sobrenome, idade e cidade.
+
+**Saída esperada:**
 ```
-"Olá, Naih !"
-Eu sou um futuro dev
-Qual é o seu nome? Naiara
-Olá, Naiara! Seja bem-vinda ao mundo da KenseiCyberSecurity!
+['Caderno', 'Lápis de cor', 'Borracha', 'Caneta', 'Régua', 'Mochila', 'Giz de cera', 'Tesoura']
+Quantidade de materiais escolares: 2 de cada
+{'nome': 'Naiara', 'sobrenome': 'Rodrigues', 'idade': 30, 'cidade': 'Minas Gerais'}
+Nome: Naiara
+Sobrenome: Rodrigues
+Idade: 30
+Cidade: Minas Gerais
 ```
+
+---
+
+## Outros Arquivos na Pasta
+
+- **`ola.py`**: Seu primeiro script, com saudações e prints básicos.
+- **`variaveis.py`**: Exemplos de variáveis, concatenação e tipos de dados.
+
+Esses arquivos são de semanas anteriores, mas ajudam a ver o progresso!
+
+---
+
+## Dicas para Iniciantes
+
+- **Listas** são ótimas para coleções ordenadas de itens.
+- **Dicionários** são ideais para dados estruturados com rótulos.
+- Sempre use `print()` para ver o que seu código está fazendo.
+- Pratique adicionando mais itens às listas e chaves aos dicionários!
+
+Continue explorando e logo você estará criando programas incríveis! 🚀
+
+---
+
+*Feito com ❤️ por Naiara Rodrigues, futura dev na KenseiCyberSecurity.*
 
 ---
 
