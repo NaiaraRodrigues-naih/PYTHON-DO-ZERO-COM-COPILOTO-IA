@@ -1,21 +1,22 @@
 # 🐍 Python do Zero com Copiloto IA
 
-## Semana 2 — Listas, Dicionários, Condicionais e Loops: Organizando Dados, Tomando Decisões e Repetindo Ações!
+## Semana 2 — Listas, Dicionários, Condicionais, Loops e Funções: Organizando Dados, Tomando Decisões, Repetindo Ações e Criando Blocos Reutilizáveis!
 
 ---
 
 ## O que foi feito?
 
-Neste projeto da Semana 2, exploramos conceitos fundamentais de Python para organizar dados, tomar decisões e repetir ações. Especificamente:
+Neste projeto da Semana 2, exploramos conceitos fundamentais de Python para organizar dados, tomar decisões, repetir ações e reutilizar código. Especificamente:
 
 - **Criamos uma lista** chamada `materiais` com itens escolares iniciais e adicionamos mais com `.append()`.
 - **Contamos os itens** da lista com `len()` e exibimos mensagens.
 - **Criamos um dicionário** chamado `informacoes_pessoais` com dados pessoais e acessamos valores usando chaves.
 - **Criamos uma segunda lista** chamada `ferramentas_cyber` com 5 ferramentas de cibersegurança e contamos os itens.
 - **Usamos estruturas condicionais** (if-else-elif) para verificar condições, como idade para maioridade, notas para classificações e respostas de um questionário.
+- **Definimos funções** para reutilizar blocos de código, como saudações personalizadas e cálculos de idade.
 - **Implementamos loops** (`for` e `while`) para repetir ações, como iterar sobre listas, contar números e gerar tabuadas.
 
-O código é comentado e usa `print()` para mostrar os resultados na tela, permitindo que você veja como listas, dicionários, condicionais e loops funcionam na prática. Este é um exemplo didático para iniciantes aprenderem a organizar dados, fazer o código "pensar" com decisões e automatizar repetições!
+O código é comentado e usa `print()` para mostrar os resultados na tela, permitindo que você veja como listas, dicionários, condicionais, loops e funções funcionam na prática. Este é um exemplo didático para iniciantes aprenderem a organizar dados, fazer o código "pensar" com decisões, automatizar repetições e reutilizar blocos de código!
 
 ### Objetivos de Aprendizado
 
@@ -33,9 +34,12 @@ Com este código, você aprenderá:
 - Como verificar igualdade (`==`) e comparações (`>=`, `<`) em condicionais.- Como usar **loops** (`for` e `while`) para repetir ações automaticamente.
 - Como iterar sobre listas com `for item in lista:`.
 - Como usar `while` com condições para loops controlados.
----
+- Como definir e chamar **funções** para reutilizar código.
+- Como passar **parâmetros** para funções para personalizar seu comportamento.
+- Como usar `return` para devolver valores de funções.
+- Como organizar código em blocos reutilizáveis para melhor manutenção.
 
-## Conceitos Aprendidos
+---
 
 ### O que são Listas?
 
@@ -62,6 +66,18 @@ pessoa = {
 ```
 
 Para acessar um valor, use a chave: `pessoa["nome"]`.
+
+### O que são Funções?
+
+Uma **função** é como uma receita ou um bloco de código que você pode reutilizar sempre que precisar. Em vez de escrever o mesmo código várias vezes, você define uma função uma vez e a chama quando quiser. Funções podem receber **parâmetros** (valores de entrada) e podem **retornar** valores. Em Python, funções são definidas com `def nome():`.
+
+**Exemplo simples:**
+```python
+def saudacao():
+    print("Olá!")
+```
+
+Para usar a função, chame: `saudacao()`.
 
 ---
 
@@ -457,6 +473,123 @@ Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
 
 ---
 
+## Arquivo Quaternário: `funcoes.py`
+
+Este arquivo demonstra o uso de **funções** para criar blocos de código reutilizáveis. Funções são como "receitas" que você pode chamar sempre que precisar executar uma tarefa específica, evitando repetir o mesmo código várias vezes.
+
+```python
+# criando uma funcão
+def saudacao():
+    print("Olá! Bem-vindo ao curso de Python para Iniciantes.")
+# chamando a função
+saudacao()
+print("Função chamada com VENCEDOR!")
+# função com parâmetros
+def saudacao_personalizada(nome):
+    print("Olá, " + nome + "! Bem-vindo ao curso de Python para Iniciantes.")
+saudacao_personalizada("Naiara")
+# função com múltiplos parâmetros
+def saudacao_com_idade(nome, idade):
+    print("Olá, " + nome + "! Você tem " + str(idade) + " anos. Bem-vindo ao curso de Python para Iniciantes.")
+saudacao_com_idade("Naiara", 30)
+# função com retorno
+def calcular_idade(ano_nascimento):
+    idade = 2026 - ano_nascimento
+    return idade
+idade_calculada = calcular_idade(1996)
+print("A idade calculada é: " + str(idade_calculada))
+```
+
+### Explicação Linha por Linha (Para Iniciantes)
+
+Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
+
+1. **Comentário e Definição da Função:**
+   ```python
+   # criando uma funcão
+   def saudacao():
+   ```
+   - `def` é a palavra-chave para definir uma função.
+   - `saudacao` é o nome da função (escolha nomes descritivos!).
+   - `()` indica que não recebe parâmetros por enquanto.
+   - O bloco da função vem depois, indentado.
+
+2. **Corpo da Função:**
+   ```python
+       print("Olá! Bem-vindo ao curso de Python para Iniciantes.")
+   ```
+   - Este é o código que a função executa quando chamada.
+   - Indentado com 4 espaços (padrão em Python).
+
+3. **Chamando a Função:**
+   ```python
+   saudacao()
+   ```
+   - Para usar a função, escreva seu nome seguido de `()`.
+   - Isso executa o código dentro da função.
+
+4. **Mensagem Após Chamada:**
+   ```python
+   print("Função chamada com VENCEDOR!")
+   ```
+   - Uma mensagem normal fora da função.
+
+5. **Função com Parâmetro:**
+   ```python
+   def saudacao_personalizada(nome):
+   ```
+   - Agora a função recebe um `parâmetro` chamado `nome`.
+   - Parâmetros são valores que você passa para a função usar.
+
+6. **Corpo com Parâmetro:**
+   ```python
+       print("Olá, " + nome + "! Bem-vindo ao curso de Python para Iniciantes.")
+   ```
+   - Usa o parâmetro `nome` na mensagem.
+
+7. **Chamando com Argumento:**
+   ```python
+   saudacao_personalizada("Naiara")
+   ```
+   - Passa "Naiara" como argumento para o parâmetro `nome`.
+
+8. **Função com Múltiplos Parâmetros:**
+   ```python
+   def saudacao_com_idade(nome, idade):
+   ```
+   - Recebe dois parâmetros: `nome` e `idade`.
+
+9. **Corpo com Conversão:**
+   ```python
+       print("Olá, " + nome + "! Você tem " + str(idade) + " anos. Bem-vindo ao curso de Python para Iniciantes.")
+   ```
+   - Converte `idade` (número) para string com `str()` para concatenar.
+
+10. **Chamando com Dois Argumentos:**
+    ```python
+    saudacao_com_idade("Naiara", 30)
+    ```
+    - Passa dois valores: "Naiara" e 30.
+
+11. **Função com Retorno:**
+    ```python
+    def calcular_idade(ano_nascimento):
+        idade = 2026 - ano_nascimento
+        return idade
+    ```
+    - Calcula a idade baseada no ano de nascimento.
+    - `return` devolve o valor calculado para quem chamou a função.
+
+12. **Usando o Retorno:**
+    ```python
+    idade_calculada = calcular_idade(1996)
+    print("A idade calculada é: " + str(idade_calculada))
+    ```
+    - Chama a função e guarda o resultado em `idade_calculada`.
+    - Exibe o resultado.
+
+---
+
 ## Códigos Utilizados e o que Fazem
 
 | Código | O que faz |
@@ -477,6 +610,10 @@ Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
 | `while condição:` | Loop que repete enquanto a condição for verdadeira |
 | `contador += 1` | Incrementa o contador em 1 (equivalente a `contador = contador + 1`) |
 | `%` | Operador de módulo (resto da divisão, ex: `5 % 2 == 1`) |
+| `def nome():` | Define uma nova função com o nome especificado |
+| `return valor` | Devolve um valor da função para quem a chamou |
+| `nome_funcao()` | Chama/executa a função com o nome especificado |
+| `def nome(parametro):` | Define uma função que recebe um parâmetro |
 
 ---
 
@@ -508,6 +645,15 @@ Quando você roda `loops.py`, o programa:
 4. Conta de 1 a 10 e imprime números ímpares.
 5. Gera a tabuada do 10.
 6. Itera sobre uma lista de nomes usando `while` e índices.
+
+Quando você roda `funcoes.py`, o programa:
+
+1. Define e chama uma função simples de saudação.
+2. Exibe uma mensagem após chamar a função.
+3. Define e chama uma função com parâmetro para saudação personalizada.
+4. Define e chama uma função com múltiplos parâmetros (nome e idade).
+5. Define e chama uma função que calcula idade baseada no ano de nascimento e retorna o valor.
+6. Exibe o resultado do cálculo de idade.
 
 **Saída esperada para `listas_dicts.py`:**
 ```
@@ -576,6 +722,15 @@ Nome: Diana
 Nome: Eve
 ```
 
+**Saída esperada para `funcoes.py`:**
+```
+Olá! Bem-vindo ao curso de Python para Iniciantes.
+Função chamada com VENCEDOR!
+Olá, Naiara! Bem-vindo ao curso de Python para Iniciantes.
+Olá, Naiara! Você tem 30 anos. Bem-vindo ao curso de Python para Iniciantes.
+A idade calculada é: 30
+```
+
 ---
 
 ## Arquivos na Pasta (Em Ordem de Aprendizado)
@@ -587,6 +742,7 @@ Aqui estão todos os arquivos na pasta "semana 2", organizados do inicial ao úl
 - **`listas_dicts.py`**: O arquivo principal desta semana, demonstrando listas e dicionários com exemplos práticos.
 - **`condicionais.py`**: Exemplos de estruturas condicionais (if-else) para tomada de decisões no código.
 - **`loops.py`**: Exemplos de loops (for e while) para repetir ações automaticamente.
+- **`funcoes.py`**: Exemplos de funções para criar blocos de código reutilizáveis.
 - **`README.md`**: Este arquivo de documentação, explicando tudo de forma didática.
 
 Esses arquivos mostram a evolução do aprendizado, começando com conceitos básicos e avançando para estruturas de dados!
