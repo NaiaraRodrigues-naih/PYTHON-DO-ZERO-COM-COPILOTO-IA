@@ -13,6 +13,8 @@ Neste arquivo `listas_dicts.py`, criamos um programa simples em Python que demon
 - **Contamos os itens** da lista com `len()` e exibimos uma mensagem.
 - **Criamos um dicionário** chamado `informacoes_pessoais` com dados pessoais (nome, sobrenome, idade, cidade).
 - **Acessamos e exibimos** cada valor do dicionário individualmente, convertendo tipos quando necessário (como idade de número para texto).
+- **Criamos uma segunda lista** chamada `ferramentas_cyber` com 5 ferramentas de cibersegurança.
+- **Contamos e exibimos** a quantidade de ferramentas na lista.
 
 O código é comentado e usa `print()` para mostrar os resultados na tela, permitindo que você veja como listas e dicionários funcionam na prática. Este é um exemplo didático para iniciantes aprenderem a organizar e manipular dados em Python!
 
@@ -27,6 +29,7 @@ Com este código, você aprenderá:
 - Como concatenar strings e converter tipos (ex: `str()` para números).
 - A importância de comentários (`#`) para explicar o código.
 - Como usar `print()` para depurar e visualizar resultados.
+- Como criar múltiplas listas em um mesmo programa para organizar diferentes tipos de dados.
 
 ---
 
@@ -87,6 +90,12 @@ print("Nome: " + informacoes_pessoais["nome"])
 print("Sobrenome: " + informacoes_pessoais["sobrenome"])
 print("Idade: " + str(informacoes_pessoais["idade"]))  # Converte número para string
 print("Cidade: " + informacoes_pessoais["cidade"])
+
+# Lista de ferramentas de cibersegurança
+ferramentas_cyber = ["Nmap", "Wireshark", "Metasploit", "Burp Suite", "John the Ripper"]
+print(ferramentas_cyber)
+quantidade_ferramentas = len(ferramentas_cyber)
+print("Quantidade de ferramentas de cyber: " + str(quantidade_ferramentas))
 ```
 
 ### Explicação Linha por Linha (Para Iniciantes)
@@ -171,6 +180,65 @@ Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
     - Faz o mesmo para sobrenome e cidade.
     - Para idade: `str(informacoes_pessoais["idade"])` converte o número 30 para string "30", porque `+` só funciona com textos iguais.
 
+12. **Comentário para Nova Lista:**
+    ```python
+    # Lista de ferramentas de cibersegurança
+    ```
+    - Novo comentário indicando uma segunda lista.
+
+13. **Criando a Lista de Ferramentas:**
+    ```python
+    ferramentas_cyber = ["Nmap", "Wireshark", "Metasploit", "Burp Suite", "John the Ripper"]
+    ```
+    - Criamos outra lista com 5 ferramentas de cibersegurança.
+    - Exemplos: Nmap (scanner de rede), Wireshark (analisador de pacotes), etc.
+
+14. **Exibindo a Lista de Ferramentas:**
+    ```python
+    print(ferramentas_cyber)
+    ```
+    - Mostra a lista: `['Nmap', 'Wireshark', 'Metasploit', 'Burp Suite', 'John the Ripper']`
+
+15. **Contando as Ferramentas:**
+    ```python
+    quantidade_ferramentas = len(ferramentas_cyber)
+    print("Quantidade de ferramentas de cyber: " + str(quantidade_ferramentas))
+    ```
+    - Conta os itens (5) e exibe a mensagem, convertendo o número para string.
+
+---
+
+## Ferramentas de Cibersegurança Explicadas (Para Iniciantes)
+
+No código, criamos uma lista com 5 ferramentas populares de cibersegurança. Aqui vai uma explicação simples de cada uma, como se você estivesse começando a aprender sobre segurança digital:
+
+1. **Nmap**:
+   - **O que é?** Uma ferramenta para "mapear" redes, como um explorador que descobre dispositivos conectados.
+   - **Para que serve?** Verificar quais portas estão abertas em um computador ou rede, ajudando a encontrar vulnerabilidades. É como bater na porta de uma casa para ver se alguém responde.
+   - **Nível iniciante:** Use para escanear sua própria rede doméstica e aprender como funciona a conectividade.
+
+2. **Wireshark**:
+   - **O que é?** Um "espião" de pacotes de dados que viajam na internet.
+   - **Para que serve?** Capturar e analisar o tráfego de rede, mostrando mensagens enviadas entre dispositivos. É como ler cartas em trânsito.
+   - **Nível iniciante:** Instale e veja como seus dados viajam quando você acessa um site, para entender privacidade.
+
+3. **Metasploit**:
+   - **O que é?** Uma "caixa de ferramentas" para testar segurança, como um kit de primeiros socorros para hackers éticos.
+   - **Para que serve?** Simular ataques para encontrar fraquezas em sistemas, antes que hackers maliciosos façam isso.
+   - **Nível iniciante:** Aprenda conceitos de exploração de vulnerabilidades em ambientes controlados (nunca em produção sem permissão).
+
+4. **Burp Suite**:
+   - **O que é?** Um "inspetor" de aplicações web, como um detetive que examina sites.
+   - **Para que serve?** Testar segurança de sites e apps web, interceptando e modificando requisições HTTP.
+   - **Nível iniciante:** Use a versão gratuita para analisar como sites enviam dados e identificar riscos básicos.
+
+5. **John the Ripper**:
+   - **O que é?** Um "quebrador" de senhas, como um chaveiro que tenta chaves até abrir.
+   - **Para que serve?** Testar a força de senhas, tentando "quebrá-las" com métodos como força bruta ou dicionário.
+   - **Nível iniciante:** Teste senhas fracas em sua própria conta para aprender a criar senhas fortes.
+
+**Dica importante:** Essas ferramentas são poderosas e devem ser usadas apenas para aprendizado e testes éticos. Nunca use em sistemas alheios sem permissão — isso pode ser ilegal! Comece instalando versões gratuitas e experimente em máquinas virtuais.
+
 ---
 
 ## Códigos Utilizados e o que Fazem
@@ -191,12 +259,15 @@ Vamos explicar o código passo a passo, como se estivéssemos aprendendo juntos!
 
 Quando você roda `listas_dicts.py`, o programa:
 
-1. Cria uma lista de materiais escolares e adiciona "Tesoura" a ela.
+1. Cria uma lista de materiais escolares e adiciona "Tesoura".
 2. Exibe a lista completa.
-3. Conta e informa a quantidade de materiais (dizendo que são 2 de cada, mas na verdade conta os itens da lista).
+3. Conta e informa a quantidade de materiais.
 4. Cria um dicionário com informações pessoais.
 5. Exibe o dicionário inteiro.
-6. Mostra cada informação separadamente, como nome, sobrenome, idade e cidade.
+6. Mostra cada informação separadamente.
+7. Cria uma lista de 5 ferramentas de cibersegurança.
+8. Exibe a lista de ferramentas.
+9. Conta e informa a quantidade de ferramentas.
 
 **Saída esperada:**
 ```
@@ -207,6 +278,8 @@ Nome: Naiara
 Sobrenome: Rodrigues
 Idade: 30
 Cidade: Minas Gerais
+['Nmap', 'Wireshark', 'Metasploit', 'Burp Suite', 'John the Ripper']
+Quantidade de ferramentas de cyber: 5
 ```
 
 ---

@@ -16,3 +16,9 @@ print("Nome: " + informacoes_pessoais["nome"])
 print("Sobrenome: " + informacoes_pessoais["sobrenome"])
 print("Idade: " + str(informacoes_pessoais["idade"]))
 print("Cidade: " + informacoes_pessoais["cidade"])
+
+# Lista de ferramentas de cibersegurança
+ferramentas_cyber = ["Nmap", "Wireshark", "Metasploit", "Burp Suite", "John the Ripper"]
+print(ferramentas_cyber)
+quantidade_ferramentas = len(ferramentas_cyber)
+print("Quantidade de ferramentas de cyber: " + str(quantidade_ferramentas))
