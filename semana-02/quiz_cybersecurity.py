@@ -1,5 +1,9 @@
 # Projeto 3: Quiz de Cybersecurity
-# 5 perguntas sobre segurança da informação com placar
+# 5 perguntas sobre segurança da informação com placar e timer de 10 segundos
+
+import threading
+
+TEMPO_LIMITE = 10
 
 perguntas = [
     {
@@ -29,8 +33,24 @@ perguntas = [
     }
 ]
 
+
+def perguntar_com_timer(prompt, timeout=TEMPO_LIMITE):
+    resposta = [None]
+
+    def capturar():
+        resposta[0] = input(prompt)
+
+    thread = threading.Thread(target=capturar)
+    thread.daemon = True
+    thread.start()
+    thread.join(timeout)
+
+    return resposta[0]
+
+
 print("=== QUIZ DE CYBERSECURITY ===")
 print(f"Total de perguntas: {len(perguntas)}")
+print(f"Tempo por pergunta: {TEMPO_LIMITE} segundos")
 
 pontos = 0
 
@@ -38,11 +58,14 @@ for i, q in enumerate(perguntas, start=1):
     print(f"\nPergunta {i}: {q['pergunta']}")
     for opcao in q["opcoes"]:
         print(f"  {opcao}")
-    print()
+    print(f"\n⏱  Você tem {TEMPO_LIMITE} segundos!")
 
-    resposta = input("Sua resposta (1, 2, 3 ou 4): ").strip()
+    resposta = perguntar_com_timer("Sua resposta (1, 2, 3 ou 4): ")
 
-    if resposta == q["resposta"]:
+    if resposta is None:
+        opcao_certa = q["opcoes"][int(q["resposta"]) - 1]
+        print(f"\nTempo esgotado! A resposta correta era: {opcao_certa}")
+    elif resposta.strip() == q["resposta"]:
         print("Correto!")
         pontos += 1
     else:
