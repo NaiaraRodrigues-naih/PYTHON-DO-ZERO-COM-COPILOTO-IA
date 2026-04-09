@@ -30,7 +30,8 @@ def organizar_pasta(caminho):
         return
 
     arquivos = [f for f in os.listdir(caminho)
-                if os.path.isfile(os.path.join(caminho, f))]
+                if os.path.isfile(os.path.join(caminho, f))
+                and f != "log_organizacao.txt"]
 
     if not arquivos:
         print("\nNenhum arquivo encontrado na pasta.")

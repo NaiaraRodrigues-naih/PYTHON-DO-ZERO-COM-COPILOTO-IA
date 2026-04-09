@@ -16,9 +16,12 @@ while True:
     opcao = input("Escolha uma opção: ")
 
     if opcao == "1":
-        item = input("Digite o item: ")
-        lista.append(item)
-        print(f'"{item}" adicionado à lista!')
+        item = input("Digite o item: ").strip()
+        if item == "":
+            print("Item não pode ser vazio!")
+        else:
+            lista.append(item)
+            print(f'"{item}" adicionado à lista!')
 
     elif opcao == "2":
         if len(lista) == 0:

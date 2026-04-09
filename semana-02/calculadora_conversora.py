@@ -13,14 +13,20 @@ while True:
     opcao = input("Escolha uma opção: ")
 
     if opcao == "1":
-        celsius = float(input("Digite a temperatura em Celsius: "))
-        fahrenheit = (celsius * 9 / 5) + 32
-        print(f"\nResultado: {celsius}°C = {fahrenheit:.2f}°F")
+        try:
+            celsius = float(input("Digite a temperatura em Celsius: "))
+            fahrenheit = (celsius * 9 / 5) + 32
+            print(f"\nResultado: {celsius}°C = {fahrenheit:.2f}°F")
+        except ValueError:
+            print("\nValor inválido! Digite apenas números.")
 
     elif opcao == "2":
-        fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
-        celsius = (fahrenheit - 32) * 5 / 9
-        print(f"\nResultado: {fahrenheit}°F = {celsius:.2f}°C")
+        try:
+            fahrenheit = float(input("Digite a temperatura em Fahrenheit: "))
+            celsius = (fahrenheit - 32) * 5 / 9
+            print(f"\nResultado: {fahrenheit}°F = {celsius:.2f}°C")
+        except ValueError:
+            print("\nValor inválido! Digite apenas números.")
 
     elif opcao == "0":
         print("\nAté logo!")

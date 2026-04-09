@@ -6,8 +6,13 @@ print("=== CALCULADORA PYTHON ===")
 while True:
     print()
 
-    numero1 = float(input("Digite o primeiro número: "))
-    numero2 = float(input("Digite o segundo número: "))
+    try:
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+    except ValueError:
+        print("\nValor inválido! Digite apenas números.")
+        continue
+
     operacao = input("Escolha a operação (+, -, *, /): ")
 
     if operacao == "+":
