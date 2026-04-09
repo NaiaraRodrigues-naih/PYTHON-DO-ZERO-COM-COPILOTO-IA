@@ -1,30 +1,39 @@
 # Desafio Final - Script 1: Calculadora
-# Pede 2 numeros e uma operacao e mostra o resultado
+# Pede 2 números e uma operação e mostra o resultado. Loop automático.
 
 print("=== CALCULADORA PYTHON ===")
 
-numero1 = float(input("Digite o primeiro numero: "))
-numero2 = float(input("Digite o segundo numero: "))
-operacao = input("Escolha a operacao (+, -, *, /): ")
+while True:
+    print()
 
-if operacao == "+":
-    resultado = numero1 + numero2
-    print("Resultado: " + str(numero1) + " + " + str(numero2) + " = " + str(resultado))
+    numero1 = float(input("Digite o primeiro número: "))
+    numero2 = float(input("Digite o segundo número: "))
+    operacao = input("Escolha a operação (+, -, *, /): ")
 
-elif operacao == "-":
-    resultado = numero1 - numero2
-    print("Resultado: " + str(numero1) + " - " + str(numero2) + " = " + str(resultado))
+    if operacao == "+":
+        resultado = numero1 + numero2
+        print(f"\nResultado: {numero1} + {numero2} = {resultado}")
 
-elif operacao == "*":
-    resultado = numero1 * numero2
-    print("Resultado: " + str(numero1) + " * " + str(numero2) + " = " + str(resultado))
+    elif operacao == "-":
+        resultado = numero1 - numero2
+        print(f"\nResultado: {numero1} - {numero2} = {resultado}")
 
-elif operacao == "/":
-    if numero2 == 0:
-        print("Erro: nao e possivel dividir por zero!")
+    elif operacao == "*":
+        resultado = numero1 * numero2
+        print(f"\nResultado: {numero1} * {numero2} = {resultado}")
+
+    elif operacao == "/":
+        if numero2 == 0:
+            print("\nErro: não é possível dividir por zero!")
+        else:
+            resultado = numero1 / numero2
+            print(f"\nResultado: {numero1} / {numero2} = {resultado:.2f}")
+
     else:
-        resultado = numero1 / numero2
-        print("Resultado: " + str(numero1) + " / " + str(numero2) + " = " + str(resultado))
+        print("\nOperação inválida! Use +, -, * ou /")
 
-else:
-    print("Operacao invalida! Use +, -, * ou /")
+    print()
+    continuar = input("Fazer outro cálculo? (s/n): ").strip().lower()
+    if continuar != "s":
+        print("\nAté logo!")
+        break
