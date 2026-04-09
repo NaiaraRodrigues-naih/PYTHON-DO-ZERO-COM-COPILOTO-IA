@@ -45,6 +45,13 @@ while True:
                 print("Número inválido!")
 
     elif opcao == "0":
+        if len(lista) > 0:
+            with open("lista_compras.txt", "w", encoding="utf-8") as arquivo:
+                arquivo.write("=== LISTA DE COMPRAS ===\n\n")
+                for i, item in enumerate(lista, start=1):
+                    arquivo.write(f"{i}. {item}\n")
+                arquivo.write(f"\nTotal: {len(lista)} item(s)\n")
+            print("\nLista salva em 'lista_compras.txt'!")
         print("\nAté logo!")
         break
 
