@@ -1,28 +1,71 @@
-# Desafio Final - Script 4: Gerador de Senhas
-# Gera senhas aleatorias com tamanho escolhido pelo usuario
+# Projeto 4: Gerador de Senhas
+# Usuário escolhe tamanho, maiúsculas, números e símbolos. Loop automático.
 
 import random
+import string
+
+MINUSCULAS = string.ascii_lowercase
+MAIUSCULAS = string.ascii_uppercase
+NUMEROS = string.digits
+SIMBOLOS = "!@#$%&*()_+-=[]{}?"
+
+
+def gerar_senha(tamanho, usar_maiusculas, usar_numeros, usar_simbolos):
+    caracteres = MINUSCULAS
+
+    obrigatorios = []
+
+    if usar_maiusculas:
+        caracteres += MAIUSCULAS
+        obrigatorios.append(random.choice(MAIUSCULAS))
+
+    if usar_numeros:
+        caracteres += NUMEROS
+        obrigatorios.append(random.choice(NUMEROS))
+
+    if usar_simbolos:
+        caracteres += SIMBOLOS
+        obrigatorios.append(random.choice(SIMBOLOS))
+
+    restante = tamanho - len(obrigatorios)
+    senha = obrigatorios + [random.choice(caracteres) for _ in range(restante)]
+
+    random.shuffle(senha)
+    return "".join(senha)
+
+
+def perguntar_sim_nao(pergunta):
+    while True:
+        resposta = input(pergunta).strip().lower()
+        if resposta in ("s", "n"):
+            return resposta == "s"
+        print("Digite 's' para sim ou 'n' para não.")
+
 
 print("=== GERADOR DE SENHAS ===")
 
-letras_minusculas = "abcdefghijklmnopqrstuvwxyz"
-letras_maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-numeros = "0123456789"
-simbolos = "!@#$%&*"
+while True:
+    print()
 
-todos_caracteres = letras_minusculas + letras_maiusculas + numeros + simbolos
+    while True:
+        tamanho_input = input("Tamanho da senha (mínimo 6): ").strip()
+        if tamanho_input.isdigit() and int(tamanho_input) >= 6:
+            tamanho = int(tamanho_input)
+            break
+        print("Digite um número válido, mínimo 6.")
 
-tamanho = int(input("Qual o tamanho da senha? (minimo 6): "))
+    usar_maiusculas = perguntar_sim_nao("Incluir letras maiúsculas? (s/n): ")
+    usar_numeros    = perguntar_sim_nao("Incluir números? (s/n): ")
+    usar_simbolos   = perguntar_sim_nao("Incluir símbolos (!@#...)? (s/n): ")
 
-if tamanho < 6:
-    print("Tamanho muito pequeno! Usando 6 como minimo.")
-    tamanho = 6
+    senha = gerar_senha(tamanho, usar_maiusculas, usar_numeros, usar_simbolos)
 
-senha = ""
-for i in range(tamanho):
-    caractere = random.choice(todos_caracteres)
-    senha += caractere
+    print(f"\nSenha gerada:  {senha}")
+    print(f"Tamanho:       {len(senha)} caracteres")
+    print("Guarde em um lugar seguro!")
 
-print("\nSua senha gerada: " + senha)
-print("Tamanho: " + str(len(senha)) + " caracteres")
-print("\nGuarde sua senha em um lugar seguro!")
+    print()
+    continuar = input("Gerar outra senha? (s/n): ").strip().lower()
+    if continuar != "s":
+        print("\nAté logo!")
+        break
